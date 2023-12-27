@@ -1,30 +1,36 @@
+<script setup>
+import { defineProps } from "vue";
+
+const { questionStatus } = defineProps(["questionStatus"]);
+</script>
+
 <template>
-    <header>
-        <h4>Qestion 1/3</h4>
-        <div class="bar">
-            <div class="completion"></div>
-        </div>
-    </header>
+  <header>
+    <h4>Qestion {{ questionStatus }}</h4>
+    <div class="bar">
+      <div class="completion"></div>
+    </div>
+  </header>
 </template>
 
 <style scoped>
 header {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 header h4 {
-    font-size: 30px;
+  font-size: 30px;
 }
 
 .bar {
-    width: 300px;
-    height: 50px;
-    border: 3px solid bisque;
+  width: 300px;
+  height: 50px;
+  border: 3px solid bisque;
 }
 
 .completion {
-    height: 100%;
-    width: 0%;
-    background-color: bisque;
+  height: 100%;
+  width: 0%;
+  background-color: bisque;
 }
 </style>
